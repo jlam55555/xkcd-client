@@ -1,8 +1,22 @@
 #!/bin/bash
 
+TOGET="http://c.xkcd.com/random/comic/"
+if [ ${#} -eq 1 ]
+  then
+    if [ ${1} = "current" ]
+      then
+        TOGET="http://www.xkcd.com/"
+      else
+        if [[ ${1} =~ ^[0-9]+$ ]]
+          then
+            TOGET="http://www.xkcd.com/${1}/"
+        fi
+    fi
+fi
+
 # get HTML file
 FILENAME=".xkcdFile"
-wget -q -O ${FILENAME} http://c.xkcd.com/random/comic/
+wget -q -O ${FILENAME} ${TOGET}
 
 # get data from HTML file
 TITLE=$(cat ${FILENAME} | grep -Pzo '(?<= alt=")(.+?)(?=" />)')
