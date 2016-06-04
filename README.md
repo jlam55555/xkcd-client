@@ -1,16 +1,18 @@
 # xkcd-client
 A simple, fun, terminal-based viewer for xkcd images.
 
+![Sample installation and usage](http://imgur.com/XsH0X7ql.png)
+
 ## Installation
 To install:
 ```
-sudo chmod +x ./install
+sudo chmod +x install
 sudo ./install
 ```
 
 To uninstall:
 ```
-sudo chmod +x ./uninstall
+sudo chmod +x uninstall
 sudo ./uninstall
 ```
 
