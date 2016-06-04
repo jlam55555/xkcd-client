@@ -9,13 +9,11 @@ A simple, fun, terminal-based viewer for xkcd images.
     sudo chmod +x install
     sudo ./install
     ```
-###     Necessary dependencies:
-
-        Make sure to have the `recode` and `wmctrl` packages installed:
-
-        ```
-        sudo apt-get install recode wmctrl
-        ```
+####     Necessary dependencies:
+    Make sure to have the `recode` and `wmctrl` packages installed:
+    ```
+    sudo apt-get install recode wmctrl
+    ```
 
 - To uninstall:
     ```
