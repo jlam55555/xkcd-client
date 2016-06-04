@@ -6,7 +6,7 @@ wget -q -O ${FILENAME} http://c.xkcd.com/random/comic/
 
 # get data from HTML file
 TITLE=$(cat ${FILENAME} | grep -Pzo '(?<= alt=")(.+?)(?=" />)')
-CAPTION=$(cat ${FILENAME} | grep -Pzo '(?<=" title=")(.+?)(?=" alt=".+?" />)')
+CAPTION=$(cat ${FILENAME} | grep -Pzo '(?<=" title=")(.+?)(?=" alt=".+?" />)' | recode html..ascii)
 URL=$(cat ${FILENAME} | grep -Pzo '(?<=<div id="comic">\n<img src=")(.+?)(?=")')
 RELURL=$(echo ${URL} | grep -Po '(?<=//imgs\.xkcd\.com/comics/).+$')
 
